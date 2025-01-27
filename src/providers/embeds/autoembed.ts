@@ -22,6 +22,10 @@ const providers = [
     id: 'autoembed-bengali',
     rank: 6,
   },
+  {
+    id: 'autoembed-french',
+    rank: 5,
+  },
 ];
 
 function embed(provider: { id: string; rank: number }) {
@@ -51,4 +55,5 @@ export const [
   autoembedBengaliScraper,
   autoembedTamilScraper,
   autoembedTeluguScraper,
+  autoembedFrenchScraper,
 ] = providers.map(embed);
