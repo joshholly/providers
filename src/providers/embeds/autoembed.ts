@@ -34,6 +34,19 @@ function embed(provider: { id: string; rank: number }) {
     name: provider.id.charAt(0).toUpperCase() + provider.id.slice(1),
     rank: provider.rank,
     async scrape(ctx) {
+      if (provider.id === 'autoembed-french') {
+        return {
+          stream: [
+            {
+              id: 'primary',
+              type: 'hls',
+              playlist: ctx.url,
+              flags: [flags.CORS_ALLOWED],
+              captions: [],
+            },
+          ],
+        };
+      }
       return {
         stream: [
           {
