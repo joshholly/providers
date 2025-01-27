@@ -74,6 +74,7 @@ import { soaperTvScraper } from './sources/soapertv';
 import { vidSrcToScraper } from './sources/vidsrcto';
 import { warezcdnScraper } from './sources/warezcdn';
 import { whvxScraper } from './sources/whvx';
+import { embedProvider as autoembedFrench } from "./embeds/autoembed-french";
 
 export function gatherAllSources(): Array<Sourcerer> {
   // all sources are gathered here
@@ -160,5 +161,6 @@ export function gatherAllEmbeds(): Array<Embed> {
     doodScraper,
     amznScraper,
     ntflxScraper,
+    autoembedFrench,
   ];
 }
